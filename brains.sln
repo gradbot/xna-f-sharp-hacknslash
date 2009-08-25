@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "brains", "brains.fsproj", "{F31B6EFA-4499-4D60-B856-64A133976BF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F31B6EFA-4499-4D60-B856-64A133976BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31B6EFA-4499-4D60-B856-64A133976BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31B6EFA-4499-4D60-B856-64A133976BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31B6EFA-4499-4D60-B856-64A133976BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
