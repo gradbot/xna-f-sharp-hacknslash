@@ -47,18 +47,23 @@ type AI_Choose() =
         member this.Priority() =
             this.Chosen.Priority()
         member this.Update(gameTime) =
+            this.Chosen <- this.Choose()
             this.Chosen.Update(gameTime)
             
-type AI_Priority(aiList : list<AI>, condition : Condition) =
+type AI_Priority(aiList : list<AI>, ?_condition : Condition) =
     inherit AI_Choose()
+    let mutable condition = if _condition.IsSome then _condition.Value else Max
+
     override this.Choose() =
         aiList 
         |> List.map (fun ai -> ai, ai.Priority())
         |> condition.Select
         |> fst
 
-type AI_Weighted_Priority(aiList : list<AI * float>, condition : Condition) =
+type AI_Weighted_Priority(aiList : list<AI * float>, ?_condition : Condition) =
     inherit AI_Choose()
+    let mutable condition = if _condition.IsSome then _condition.Value else Max
+
     override this.Choose() =
         aiList 
         |> List.map (fun (ai, weight) -> ai, weight * ai.Priority())

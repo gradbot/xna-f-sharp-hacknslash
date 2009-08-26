@@ -64,6 +64,7 @@
     <Compile Include="Entity.fs" />
     <Compile Include="Abilities.fs" />
     <Compile Include="AI.fs" />
+    <Compile Include="AI_Attack.fs" />
     <Compile Include="AI_Follow.fs" />
     <Compile Include="AI_PC.fs" />
     <Compile Include="AI_NPC.fs" />

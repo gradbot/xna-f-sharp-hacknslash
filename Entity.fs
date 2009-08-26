@@ -21,3 +21,6 @@ type Entity(physical : Physical, gear : Gear, stats : Stats, alignment : Alignme
         
     member this.Stats
         with get() = stats
+        
+    member this.Attack(entity : Entity) =
+        ()
