@@ -9,6 +9,9 @@ type Physical(_position : Vector2, _scale : float32, _texture : Texture2D) =
     let mutable color = Color.White
     let mutable texture = _texture
     
+    // This one function is the current graphics engine
+    // this will be replaced with something like 10 to 20 classes to manage graphics
+    // however for now we will just have circles
     member this.Render(context : SpriteBatch) =
         let rect = Nullable<Rectangle>()
         let offset = Vector2(float32 texture.Width, float32 texture.Height) * 0.5f

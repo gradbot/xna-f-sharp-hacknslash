@@ -11,7 +11,7 @@ open XNAEngine
 open Resource
 open Entity
 open Frame
-open Stage
+open Stage_1
 
 type MyGame() as this =
     inherit Game()
@@ -30,7 +30,7 @@ type MyGame() as this =
         
     override this.Initialize() =
         base.Initialize()
-        frames <- (Stage(resource) :> Frame) :: frames       
+        frames <- (Stage_1(resource) :> Frame) :: frames       
         
     override this.Draw(gameTime) =
         xna.gd.Clear(Color(0.0f, 0.0f, 0.0f))
@@ -53,4 +53,3 @@ let main() =
 
 [<STAThread>]
 do main()
-

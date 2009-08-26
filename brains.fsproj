@@ -61,8 +61,16 @@
     <Compile Include="Stats.fs" />
     <Compile Include="Gear.fs" />
     <Compile Include="Entity.fs" />
+    <Compile Include="Abilities.fs" />
     <Compile Include="AI.fs" />
+    <Compile Include="AI_PC.fs" />
+    <Compile Include="AI_NPC.fs" />
+    <Compile Include="AI_Group.fs" />
+    <Compile Include="Trigger_Random.fs" />
+    <Compile Include="Trigger_State.fs" />
+    <Compile Include="Trigger_Sequential.fs" />
     <Compile Include="Stage.fs" />
+    <Compile Include="Stage_1.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <Import Project="$(ProgramFiles)\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />

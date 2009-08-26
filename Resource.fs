@@ -30,5 +30,5 @@ type Resource =
         
     member this.Load(xna : XNAEngine) =
         this.SpriteBatch.["hud"] <- new SpriteBatch(xna.gd)
-        this.Texture2D.["circle"] <- Texture2D.FromFile(xna.gd, "circle.png")
+        this.Texture2D.["circle"] <- Texture2D.FromFile(xna.gd, "../../circle.png")
     
