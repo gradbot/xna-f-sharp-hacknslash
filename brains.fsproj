@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tree.fs" />
     <Compile Include="XNAEngine.fs" />
     <Compile Include="Frame.fs" />
     <Compile Include="Resource.fs" />
@@ -63,9 +64,10 @@
     <Compile Include="Entity.fs" />
     <Compile Include="Abilities.fs" />
     <Compile Include="AI.fs" />
+    <Compile Include="AI_Follow.fs" />
     <Compile Include="AI_PC.fs" />
     <Compile Include="AI_NPC.fs" />
-    <Compile Include="AI_Group.fs" />
+    <Compile Include="AI_Choose.fs" />
     <Compile Include="Trigger_Random.fs" />
     <Compile Include="Trigger_State.fs" />
     <Compile Include="Trigger_Sequential.fs" />
