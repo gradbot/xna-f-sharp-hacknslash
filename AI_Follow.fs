@@ -25,4 +25,6 @@ type AI_Follow(entity : Entity, ?_target : Entity) =
             target <- _target
         member this.Stop() =
             target <- None
+        member this.Reset() =
+            target <- _target
 
