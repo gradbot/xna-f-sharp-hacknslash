@@ -25,7 +25,7 @@ type Stage_1(resource) =
         let ai1 = 
             AI_Priority(
                 [
-                    (AI_Follow(obj1, obj2, AI_Follow.Aggression.Static(0.01)) :> AI);
+                    (AI_Follow(obj1, obj2, Static(0.01)) :> AI);
                     (AI_Attack(obj1, obj2) :> AI);
                 ])
         base.Ais <- [(ai1 :> AI)]

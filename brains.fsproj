@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Tree.fs" />
     <Compile Include="XNAEngine.fs" />
+    <Compile Include="Controller.fs" />
+    <Compile Include="Player.fs" />
     <Compile Include="Frame.fs" />
     <Compile Include="Resource.fs" />
     <Compile Include="Effect.fs" />
