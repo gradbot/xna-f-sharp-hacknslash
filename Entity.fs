@@ -24,3 +24,11 @@ type Entity(physical : Physical, gear : Gear, stats : Stats, alignment : Alignme
         
     member this.Attack(entity : Entity) =
         ()
+        
+    member this.Distance(entity : Entity) =
+        Vector2.Distance(physical.Position, entity.Physical.Position)
+        
+    member this.CompareDistance (f : float32 -> float32 -> bool) (entity : Entity) x =
+        fun () -> f (this.Distance(entity)) x
+        
+   

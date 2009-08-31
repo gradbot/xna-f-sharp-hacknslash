@@ -12,6 +12,7 @@ open Resource
 open Entity
 open Frame
 open Stage_1
+open Mouse
 
 type MyGame() as this =
     inherit Game()
@@ -38,6 +39,8 @@ type MyGame() as this =
         
 
     override this.Update(gameTime) =
+        Mouse.Update()
+        let m = Mouse.Position
         let currentTime = float32 gameTime.TotalRealTime.TotalSeconds
         if oldTime = 0.0f then
             oldTime <- currentTime

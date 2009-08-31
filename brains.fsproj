@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Tree.fs" />
     <Compile Include="XNAEngine.fs" />
+    <Compile Include="Mouse.fs" />
     <Compile Include="Controller.fs" />
     <Compile Include="Player.fs" />
     <Compile Include="Frame.fs" />

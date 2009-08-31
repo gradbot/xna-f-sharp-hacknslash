@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>FSharp.PowerPack.Math.Providers</name></assembly>
+<members>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dtrsv_(System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dtrsm_(System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dsygvd_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dsygv_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dsyevd_(System.Char,System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dsyev_(System.Char,System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dpotrf_(System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dposvx_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dposv_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgglse_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dggev_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgetrf_(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgesvx_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgesvd_(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgesv_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgesdd_(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgeqrf_(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgemv_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgemm_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgels_(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.ILapack.dgeev_(System.Char,Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.ILapack">
+<summary>
+This is an internal interface and not for user usage.
+It exposes a specialised subset of BLAS/LAPACK functionality.
+This functionality is used by us to build the exposed APIs.
+It is those exposed APIs that should be used.
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Bindings.Internals.LapackMKL.MKLProvider">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.LapackMKL">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.LapackMKLStubs">
+
+</member>
+<member name="P:Microsoft.FSharp.Math.Bindings.Internals.LapackNetlib.NetlibProvider">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.LapackNetlib">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.LapackNetlibStubs">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.assertDimensions(System.String,System.String,System.String,System.Int32,System.Int32)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeA``1(Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeA2``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeAA``1(Microsoft.FSharp.NativeInterop.PinnedArray`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeM``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeMM``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeMMM``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeMV``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeMVV``1(Microsoft.FSharp.NativeInterop.PinnedArray2`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeV``1(Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.freeVV``1(Microsoft.FSharp.NativeInterop.PinnedArray`1{``0},Microsoft.FSharp.NativeInterop.PinnedArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.matrixDim1``1(Microsoft.FSharp.Math.Matrix`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.matrixDim2``1(Microsoft.FSharp.Math.Matrix`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.matrixDims``1(Microsoft.FSharp.Math.Matrix`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.nativeArray_as_CMatrix_colvec``1(Microsoft.FSharp.NativeInterop.NativeArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.nativeArray_as_FortranMatrix_colvec``1(Microsoft.FSharp.NativeInterop.NativeArray`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinA``1(``0[]`1)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinA2``1(``0[,]`1)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinAA``2(``0[]`1,``1[]`1)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinM``1(Microsoft.FSharp.Math.Matrix`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinMM``2(Microsoft.FSharp.Math.Matrix`1{``0},Microsoft.FSharp.Math.Matrix`1{``1})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinMMM``3(Microsoft.FSharp.Math.Matrix`1{``0},Microsoft.FSharp.Math.Matrix`1{``1},Microsoft.FSharp.Math.Matrix`1{``2})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinMV``2(Microsoft.FSharp.Math.Matrix`1{``0},Microsoft.FSharp.Math.Vector`1{``1})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinMVV``3(Microsoft.FSharp.Math.Matrix`1{``0},Microsoft.FSharp.Math.Vector`1{``1},Microsoft.FSharp.Math.Vector`1{``2})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinV``1(Microsoft.FSharp.Math.Vector`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.pinVV``2(Microsoft.FSharp.Math.Vector`1{``0},Microsoft.FSharp.Math.Vector`1{``1})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities.vectorDim``1(Microsoft.FSharp.Math.Vector`1{``0})">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Bindings.Internals.NativeUtilities">
+
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.Provider`1.RequiredDLLs">
+
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.Provider`1.Name">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Provider`1.Provide">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Provider`1.Check">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Provider`1..ctor(System.String,System.String[]`1,Microsoft.FSharp.Core.FastFunc`2{Microsoft.FSharp.Core.Unit,``0})">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.Provider`1">
+
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.Service`1.Providers(Microsoft.FSharp.Math.Experimental.Provider`1{``0}[]`1)">
+
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.Service`1.Providers">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.Stop">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.Status">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.StartWith(Microsoft.FSharp.Math.Experimental.Provider`1{``0})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.Start">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.Service">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1.Available">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.Service`1..ctor(System.Collections.Generic.IEnumerable`1{Microsoft.FSharp.Math.Experimental.Provider`1{``0}})">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.Service`1">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Permutation">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Cholesky(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the cholesky decomposition of matrix A: A = C�C. Uses LAPACK *potrf if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Condition(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Estimates the condition number of matrix A in 2-norm using an SVD decomposition of A.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Determinant(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Computes the determinant of a matrix. Uses an LU factorization to compute the determinant.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.EigenSpectrum(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the eigenvalue-eigenvector decomposition of matrix A: A=UVU'. Uses LAPACK *geev if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.EigenSpectrumWhenSymmetric(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the eigenvalue-eigenvector decomposition of matrix A: A=UVU'. Uses LAPACK *syev if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.EigenValues(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the eigenvalues of matrix A: A=UVU'. Uses LAPACK *geev if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.EigenValuesWhenSymmetric(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the eigenvalues of matrix A: A=UVU'. Uses LAPACK *syev if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Hessenberg(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute a Hessenberg form of the matrix A. Uses LAPACK *gehrd if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Inverse(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Computes the inverse of matrix A. Uses LAPACK *gesv on an identity matrix if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.LU(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the LU decomposition of matrix A: PA=LU. Uses LAPACK *getrf if possible.
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebra.Lapack">
+<summary>
+ The LAPACK and BLAS service.
+ The default providers are already registered.
+ The service is primed to auto start on the first service request.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.LeastSquares(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+<summary>
+ Computes a least squares solution using a QR factorization; e.g. min_x ||b - Ax||
+ using the 2-norm. Uses LAPACK *gels if possible.
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebra.MKLProvider">
+<summary>
+ The MKL provider for the BLAS/LAPACK service
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebra.NetlibProvider">
+<summary>
+ The Netlib provider for the BLAS/LAPACK service
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.QR(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the QR factorization of matrix A: A=QR. Uses LAPACK *geqrf if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.SVD(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute the SVD of matrix A: A=UDV'. The singular values are returned in descending
+ order. Uses LAPACK *gesvd if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.SolveLinearSystem(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+<summary>
+ Solves the linear system Ax=b when given A and b with no particular structure for A assumed. The method may
+ fail when A is singular.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.SolveLinearSystems(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Solves the linear system Ax=B when given A and B with no particular structure for A nor B assumed. The method may
+ fail when A is singular.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.SolveTriangularLinearSystem(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double},System.Boolean)">
+<summary>
+ Solves a system of linear equations for vector x when A is triangular: Ax=b. The isLower
+ flag specifies whether the input argument A is lower triangular. Uses BLAS *trsv if possible.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebra.SolveTriangularLinearSystems(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double},System.Boolean)">
+<summary>
+ Solves a system of linear equations for every column vector of B when A is triangular: AX=B. The isLower
+ flag specifies whether the input argument A is lower triangular. Uses BLAS *trsm if possible.
+</summary>
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebra">
+<summary>
+ Attribution and acknowledgement:
+
+ These modules provide linear algebra functionality on F# matrix types.
+ Some functionality is implemented using a provider model.
+ The providers dynamic link to BLAS and Lapack DLLs.
+
+ There are currently providers for:
+ a) blas.dll and lapack.dll which can be built from netlib.org sources.
+ b) the High Performance Intel(R) Math Kernel Library (MKL) runtime DLLs.
+
+ For information on the Intel(R) MKL High Performance library, please see:
+ http://www.intel.com/cd/software/products/asmo-na/eng/307757.htm
+</summary>
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.Permutation">
+
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.range">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.Cholesky(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.Condition``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.EigenSpectrum``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.Hessenberg(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.HouseholderTransform(Microsoft.FSharp.Math.Matrix`1{System.Double},System.Int32)">
+<summary>
+ This method computes and performs a Householder reflection. It will change the
+ input matrix and return the reflection vector.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.Inverse(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.LU(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.NYI``1">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.QR(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.SVD``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.SolveLinearSystem(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.SolveLinearSystems(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.SolveTriangularLinearSystem(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double},System.Boolean)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.SolveTriangularLinearSystems(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double},System.Boolean)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.eigenvalues``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.eigenvectors``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.leastSquares(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.sign(System.Double)">
+<summary>
+ Computes the sign of a floating point number.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.sumfR(Microsoft.FSharp.Core.FastFunc`2{System.Int32,System.Double},System.Int32,System.Int32)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.symmetricEigenvalues``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.symmetricEigenvectors``2(``0)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged.unitV(System.Int32)">
+<summary>
+ Generates a unit vector [1 0 .. 0 ].
+</summary>
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebraManaged">
+<summary>
+ This module is for internal use only.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.Cholesky(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Given A[n,n] real symmetric positive definite.
+ Finds the cholesky decomposition L such that L' * L = A.
+ May fail if not positive definite.
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.LAPACKService">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.LU(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Given A[n,n] real matrix.
+ Finds P,L,U such that L*U = P*A with L,U lower/upper triangular.
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.MKLProvider">
+<summary>
+ Attribution and acknowledgement:
+
+ These modules provide linear algebra functionality on F# matrix types.
+ The functionality is implemented using a provider model.
+ The providers dynamic link to BLAS and Lapack DLLs.
+
+ There are currently providers for:
+ a) blas.dll and lapack.dll which can be built from netlib.org sources.
+ b) the High Performance Intel(R) Math Kernel Library (MKL) runtime DLLs.
+
+ For information on the Intel(R) MKL High Performance library, please see:
+ http://www.intel.com/cd/software/products/asmo-na/eng/307757.htm
+
+</summary>
+</member>
+<member name="P:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.NetlibProvider">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.QR(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Given A[m,n] finds Q[m,m] and R[k,n] where k = min m n.
+ Have A = Q.R  when m<=n.
+ Have A = Q.RX when m>n and RX[m,n] is R[n,n] row extended with (m-n) zero rows.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.SVD(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.Service">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.eigenvalues(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute eigenvalues of a square real matrix.
+ Returns arrays containing the eigenvalues which may be complex.
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.eigenvectors(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute eigenvalue/eigenvector decomposition of a square real matrix.
+ Returns two arrays containing the eigenvalues and eigenvectors, which may be complex.
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.inverse(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Given A[n,n] find it's inverse.
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.leastSquares(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+<summary>
+ Given A[m,n] and B[m] solves AX = B for X[n].
+ When m=>n, have over constrained system, finds least squares solution for X.
+ When m<n, have under constrained system, finds least norm solution for X.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.preDivideByMatrix(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Given A[n,m] and B[n,k] solve for X[m,k] such that AX = B
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.preDivideByVector(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double})">
+<summary>
+ Given A[n,m] and B[n] solve for x[m] such that Ax = B
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.solveTriangularForMatrix(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Matrix`1{System.Double},System.Boolean)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.solveTriangularForVector(Microsoft.FSharp.Math.Matrix`1{System.Double},Microsoft.FSharp.Math.Vector`1{System.Double},System.Boolean)">
+
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.symmetricEigenvalues(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute eigenvalues for a real symmetric matrix.
+ Returns array of real eigenvalues.
+ This call may fail.
+</summary>
+</member>
+<member name="M:Microsoft.FSharp.Math.Experimental.LinearAlgebraService.symmetricEigenvectors(Microsoft.FSharp.Math.Matrix`1{System.Double})">
+<summary>
+ Compute eigenvalues and eigenvectors for a real symmetric matrix.
+ Returns arrays of the values and vectors (both based on reals).
+ This call may fail.
+</summary>
+</member>
+<member name="T:Microsoft.FSharp.Math.Experimental.LinearAlgebraService">
+<summary>
+ This module is for internal use only.
+</summary>
+</member>
+</members>
+</doc>

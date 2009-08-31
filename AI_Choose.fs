@@ -1,5 +1,4 @@
-﻿// This AI will handle group movement and action such as 
-// flocking together, attacking a single target, and alerting fellow AI
+﻿// AI classes make decisions based on their child AI priorities and action feedback
 
 open AI
 
@@ -22,6 +21,8 @@ type Condition =
 
 [<AbstractClass>]
 type AI_Choose() =
+    inherit AI()
+    
     let mutable chosen = Option<AI>.None
     
     abstract member Choose : unit -> AI
@@ -37,18 +38,20 @@ type AI_Choose() =
             chosen <- Some(x)
             x.Start()
         
-    interface AI with
-        member this.Start() =
-            this.Chosen.Start()
-        member this.Stop() =
-            this.Chosen.Stop()
-        member this.Reset() =
-            this.Chosen <- this.Choose()
-        member this.Priority() =
-            this.Chosen.Priority()
-        member this.Update(gameTime) =
-            this.Chosen <- this.Choose()
-            this.Chosen.Update(gameTime)
+    override this.Start() =
+        base.Start()
+        this.Chosen.Start()
+    override this.Stop() =
+        base.Stop()
+        this.Chosen.Stop()
+    override this.Reset() =
+        base.Reset()
+        this.Chosen <- this.Choose()
+    override this.Priority() =
+        this.Chosen.Priority()
+    override this.Update(gameTime) =
+        this.Chosen <- this.Choose()
+        this.Chosen.Update(gameTime)
             
 type AI_Priority(aiList : list<AI>, ?_condition : Condition) =
     inherit AI_Choose()
