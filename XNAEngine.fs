@@ -12,7 +12,8 @@ type XNAEngine() =
 
     member this.Init(game : Game) =
         game.Window.Title <- "Brains - a Zombie RPG"
-
+        game.IsMouseVisible <- true
+        
         graphics <- new GraphicsDeviceManager(game)
         graphics.PreferredBackBufferWidth <- 600
         graphics.PreferredBackBufferHeight <- 800

@@ -2,6 +2,8 @@
 open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 
+open Mouse
+
 type Physical(_position : Vector2, _scale : float32, _texture : Texture2D) =
     let mutable position = _position
     let mutable velocity = Vector2()
@@ -14,8 +16,8 @@ type Physical(_position : Vector2, _scale : float32, _texture : Texture2D) =
     // however for now we will just have circles
     member this.Render(context : SpriteBatch) =
         let rect = Nullable<Rectangle>()
-        let offset = Vector2(float32 texture.Width, float32 texture.Height) * 0.5f
-        context.Draw(texture, position - offset, rect, color, 0.0f, Vector2(0.0f), scale, SpriteEffects.None, 0.0f)
+        let offset = Vector2(float32 texture.Width, float32 texture.Height) * 0.5f * scale
+        context.Draw(texture, this.Position - offset, rect, color, 0.0f, Vector2(0.0f), scale, SpriteEffects.None, 0.0f)
 
     member this.Update(gameTime : float32) =
         position <- position + velocity * gameTime
@@ -24,5 +26,16 @@ type Physical(_position : Vector2, _scale : float32, _texture : Texture2D) =
         with get() = velocity 
         and set x = velocity <- x
         
-    member this.Position
+    abstract member Position : Vector2
+    default this.Position
         with get() = position
+    
+//    abstract member this.Position
+//        with get() = position
+        
+type Physical_Mouse(_scale : float32, _texture : Texture2D) =
+    inherit Physical(Vector2(20.0f), _scale, _texture)
+    
+    override this.Position
+        with get() = Mouse.Position
+        
