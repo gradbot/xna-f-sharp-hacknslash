@@ -1,4 +1,5 @@
-﻿open Microsoft.Xna.Framework.Input
+﻿open Microsoft.Xna.Framework
+open Microsoft.Xna.Framework.Input
 
 type Controller(id : int) =
     static let mutable count = 0
@@ -17,5 +18,5 @@ type Controller(id : int) =
             None
     
     static member Update() =
-        GamePad.GetState(0)
-        ()
+        state.[0] <- Some(GamePad.GetState(PlayerIndex.One))
+        
