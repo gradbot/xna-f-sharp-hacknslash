@@ -30,7 +30,7 @@ type AI_Chain(ais : AI list) =
     override this.Priority() =
         match started with
         | head :: tail -> head.Priority()
-        | _ -> 0
+        | _ -> 0.0
     override this.Update(gameTime) =
         ais
         |> List.iterWhile (fun x -> 
