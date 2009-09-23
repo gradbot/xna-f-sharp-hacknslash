@@ -24,4 +24,6 @@ type XNAEngine() =
     member this.gd =
         graphics.GraphicsDevice
 
+    member this.clear() =
+        this.gd.Clear(Color(0.0f, 0.0f, 0.0f))
 

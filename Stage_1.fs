@@ -43,4 +43,4 @@ type Stage_1(resource) =
         
         base.Ais <- [(ai1 :> AI)]
         
-        
+

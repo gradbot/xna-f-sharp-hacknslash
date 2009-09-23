@@ -1,11 +1,11 @@
 ﻿open System
-open System.Collections
+//open System.Collections
 
 open Microsoft.Xna.Framework
-open Microsoft.Xna.Framework.Content
-open Microsoft.Xna.Framework.Graphics
-open Microsoft.Xna.Framework.Input
-open Microsoft.Xna.Framework.Audio
+//open Microsoft.Xna.Framework.Content
+//open Microsoft.Xna.Framework.Graphics
+//open Microsoft.Xna.Framework.Input
+//open Microsoft.Xna.Framework.Audio
 
 open XNAEngine
 open Resource
@@ -34,21 +34,22 @@ type MyGame() as this =
         frames <- (Stage_1(resource) :> Frame) :: frames       
         
     override this.Draw(gameTime) =
-        xna.gd.Clear(Color(0.0f, 0.0f, 0.0f))
+        xna.clear()
         frames |> List.iter (fun f -> f.Draw(diffTime))
         
 
     override this.Update(gameTime) =
         Mouse.Update()
         let m = Mouse.Position
-        let currentTime = float32 gameTime.TotalRealTime.TotalSeconds
+        let currentTime = float32 gameTime.TotalRealTime.Ticks
+        
         if oldTime = 0.0f then
             oldTime <- currentTime
-        diffTime <- currentTime - oldTime            
-            
-        frames |> List.iter (fun f -> f.Update(diffTime))
-        //this.Exit()            
-        oldTime <- currentTime
+        diffTime <- currentTime - oldTime
+
+        if diffTime > 10000000.0f / 80.0f then
+            frames |> List.iter (fun f -> f.Update(diffTime / 10000000.0f))
+            oldTime <- currentTime
     
 let main() =
     let game = new MyGame()
