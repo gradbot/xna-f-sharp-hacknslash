@@ -35,13 +35,6 @@
     <Tailcalls>false</Tailcalls>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FSharp.PowerPack, Version=3.9.9.995, Culture=neutral, PublicKeyToken=a19089b1c74d0809">
-      <Name>FSharp.PowerPack</Name>
-      <AssemblyName>FSharp.PowerPack.dll</AssemblyName>
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>FSharp-PowerPack-4.0-Beta1\FSharp.PowerPack.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d">
       <Name>Microsoft.Xna.Framework</Name>
       <AssemblyName>Microsoft.Xna.Framework.dll</AssemblyName>
@@ -63,6 +56,8 @@
     <Compile Include="Tree.fs" />
     <Compile Include="XNAEngine.fs" />
     <Compile Include="Mouse.fs" />
+    <Compile Include="Controller.fs" />
+    <Compile Include="Player.fs" />
     <Compile Include="Frame.fs" />
     <Compile Include="Resource.fs" />
     <Compile Include="Effect.fs" />
@@ -70,16 +65,13 @@
     <Compile Include="Stats.fs" />
     <Compile Include="Gear.fs" />
     <Compile Include="Entity.fs" />
-    <Compile Include="State.fs" />
     <Compile Include="Abilities.fs" />
-    <Compile Include="Feedback.fs" />
     <Compile Include="AI.fs" />
     <Compile Include="AI_Attack.fs" />
     <Compile Include="AI_Follow.fs" />
     <Compile Include="AI_PC.fs" />
     <Compile Include="AI_NPC.fs" />
     <Compile Include="AI_Choose.fs" />
-    <Compile Include="AI_Predicate.fs" />
     <Compile Include="Trigger_Random.fs" />
     <Compile Include="Trigger_State.fs" />
     <Compile Include="Trigger_Sequential.fs" />
