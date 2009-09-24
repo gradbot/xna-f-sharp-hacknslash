@@ -25,33 +25,51 @@ type AI_Choose() =
     
     let mutable chosen = Option<AI>.None
     
-    abstract member Choose : unit -> AI
+    abstract member Choose : unit -> AI * float
 
+    // getting will not start the AI
+    // setting will if none zero priority
     member this.Chosen
         with get() = 
             if Option.isNone chosen then
-                chosen <- Some(this.Choose())
+                chosen <- Some(fst <| this.Choose())
+                
             chosen.Value
-        and set(x) =
-            if Option.isSome chosen then
+            
+        and set(choice, priority) =
+            if Option.isSome chosen && chosen.Value <> choice then
                 chosen.Value.Stop()
-            chosen <- Some(x)
-            x.Start()
+                
+            chosen <- Some(choice)
+            
+            if priority > 0.0 then
+                choice.Start()
         
     override this.Start() =
         base.Start()
-        this.Chosen.Start()
+//        if Option.isSome chosen then
+//            chosen.Value.Start()
+        
     override this.Stop() =
         base.Stop()
-        this.Chosen.Stop()
+        if Option.isSome chosen then
+            chosen.Value.Stop()
+        
     override this.Reset() =
         base.Reset()
         this.Chosen <- this.Choose()
+        
     override this.Priority() =
-        this.Chosen.Priority()
+        if Option.isSome chosen then
+            chosen.Value.Priority()
+        else
+            0.0
+        
     override this.Update(gameTime) =
         this.Chosen <- this.Choose()
-        this.Chosen.Update(gameTime)
+        
+        if Option.isSome chosen then
+            chosen.Value.Update(gameTime)
             
 type AI_Priority(aiList : list<AI>, ?_condition : Condition) =
     inherit AI_Choose()
@@ -61,7 +79,6 @@ type AI_Priority(aiList : list<AI>, ?_condition : Condition) =
         aiList 
         |> List.map (fun ai -> ai, ai.Priority())
         |> condition.Select
-        |> fst
 
 type AI_Weighted_Priority(aiList : list<AI * float>, ?_condition : Condition) =
     inherit AI_Choose()
@@ -71,4 +88,3 @@ type AI_Weighted_Priority(aiList : list<AI * float>, ?_condition : Condition) =
         aiList 
         |> List.map (fun (ai, weight) -> ai, weight * ai.Priority())
         |> condition.Select
-        |> fst
