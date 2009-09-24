@@ -31,8 +31,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <PlatformTarget>x86</PlatformTarget>
-    <Optimize>false</Optimize>
-    <Tailcalls>false</Tailcalls>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d">
@@ -69,6 +69,7 @@
     <Compile Include="AI.fs" />
     <Compile Include="AI_Attack.fs" />
     <Compile Include="AI_Follow.fs" />
+    <Compile Include="AI_MoveTo.fs" />
     <Compile Include="AI_PC.fs" />
     <Compile Include="AI_NPC.fs" />
     <Compile Include="AI_Choose.fs" />
