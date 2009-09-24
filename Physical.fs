@@ -26,16 +26,7 @@ type Physical(_position : Vector2, _scale : float32, _texture : Texture2D) =
         with get() = velocity 
         and set x = velocity <- x
         
-    abstract member Position : Vector2
-    default this.Position
+    member this.Position
         with get() = position
-    
-//    abstract member this.Position
-//        with get() = position
-        
-type Physical_Mouse(_scale : float32, _texture : Texture2D) =
-    inherit Physical(Vector2(20.0f), _scale, _texture)
-    
-    override this.Position
-        with get() = Mouse.Position
-        
+        and set x = position <- x
+            
