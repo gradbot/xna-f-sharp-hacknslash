@@ -21,7 +21,7 @@ type MyGame() as this =
     let resource = Resource.Default
     
     let mutable frames = List<Frame>.Empty
-    let mutable oldTime = 0.0f
+    let mutable oldTime = 0L
     let mutable diffTime = 0.0f
 
     do  xna.Init(this)
@@ -39,16 +39,15 @@ type MyGame() as this =
         
 
     override this.Update(gameTime) =
-        Mouse.Update()
-        let m = Mouse.Position
-        let currentTime = float32 gameTime.TotalRealTime.Ticks
+        let currentTime = gameTime.TotalRealTime.Ticks
         
-        if oldTime = 0.0f then
+        if oldTime = 0L then
             oldTime <- currentTime
-        diffTime <- currentTime - oldTime
-
-        if diffTime > 10000000.0f / 80.0f then
-            frames |> List.iter (fun f -> f.Update(diffTime / 10000000.0f))
+            
+        if currentTime - oldTime > 10000000L / 80L then
+            diffTime <- 10000000.0f / float32 (currentTime - oldTime)
+            Mouse.Update()
+            frames |> List.iter (fun f -> f.Update(1.0f / 80.0f))//diffTime))
             oldTime <- currentTime
     
 let main() =
