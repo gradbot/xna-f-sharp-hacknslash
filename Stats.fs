@@ -1,4 +1,6 @@
-﻿
+﻿namespace Brains
+
+
 type Stats(_healthPoints : int, level : int, maxVelocity : float32) =
     let mutable healthPoints = _healthPoints
     

@@ -1,17 +1,7 @@
 ﻿open System
-//open System.Collections
-
 open Microsoft.Xna.Framework
-//open Microsoft.Xna.Framework.Content
-//open Microsoft.Xna.Framework.Graphics
-//open Microsoft.Xna.Framework.Input
-//open Microsoft.Xna.Framework.Audio
 
-open XNAEngine
-open Resource
-open Entity
-open Frame
-open Stage_1
+open Brains
 open Mouse
 
 type MyGame() as this =

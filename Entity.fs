@@ -1,9 +1,7 @@
-﻿open System
-open Microsoft.Xna.Framework
+﻿namespace Brains
 
-open Physical
-open Gear
-open Stats
+open System
+open Microsoft.Xna.Framework
                         
 type Alignment =
     | Good

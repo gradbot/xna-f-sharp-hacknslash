@@ -1,6 +1,6 @@
-﻿// AI classes make decisions based on their child AI priorities and action feedback
+﻿namespace Brains
 
-open AI
+// AI classes make decisions based on their child AI priorities and action feedback
 
 type Condition =
     | Closest of float

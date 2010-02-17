@@ -1,5 +1,4 @@
-﻿//
-open AI
+﻿namespace Brains
 
 type AI_Predicate(aiList : list<(unit -> bool) * AI>) =
     inherit AI()

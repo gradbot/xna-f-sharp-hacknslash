@@ -1,15 +1,19 @@
-﻿open Microsoft.Xna.Framework
+﻿module Mouse
+
+open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Input
+
+// compiler no longer allows this to be a static member as of 1.9.9.9
+let mutable mouseState = Unchecked.defaultof<MouseState>
  
 type Mouse() =
-    static let mutable mouseState = Unchecked.defaultof<MouseState>
     static let mutable first = true
 
-    static let moveTrigger, move = Event.create()
-    static let leftButtonTrigger, leftButton = Event.create()
-    static let rightButtonTrigger, rightButton = Event.create()
-    static let middleButtonTrigger, middleButton = Event.create()
-    static let scrollWheelValueTrigger, scrollWheelValue = Event.create()
+    static let move = new Event<_>()
+    static let leftButton = new Event<_>()
+    static let rightButton = new Event<_>()
+    static let middleButton = new Event<_>()
+    static let scrollWheelValue = new Event<_>()
 
     static member Position
         with get() = Vector2(float32 mouseState.X, float32 mouseState.Y)
@@ -22,34 +26,34 @@ type Mouse() =
             first <- false
         
         if newState.X <> mouseState.X || newState.Y <> mouseState.Y then
-            moveTrigger(Mouse.Position)
+            move.Trigger(Mouse.Position)
         
         if newState.LeftButton = ButtonState.Pressed && mouseState.LeftButton = ButtonState.Released then
-            leftButtonTrigger(Mouse.Position)
+            leftButton.Trigger(Mouse.Position)
         
         if newState.RightButton = ButtonState.Pressed && mouseState.RightButton = ButtonState.Released then
-            rightButtonTrigger(Mouse.Position)
+            rightButton.Trigger(Mouse.Position)
         
         if newState.MiddleButton = ButtonState.Pressed && mouseState.MiddleButton = ButtonState.Released then
-            middleButtonTrigger(Mouse.Position)
+            middleButton.Trigger(Mouse.Position)
         
         if newState.ScrollWheelValue <> mouseState.ScrollWheelValue then
-            scrollWheelValueTrigger(mouseState.ScrollWheelValue)
+            scrollWheelValue.Trigger(mouseState.ScrollWheelValue)
             
         mouseState <- newState
         
     static member Move
-        with get() = move
+        with get() = move.Publish
         
     static member LeftButton
-        with get() = leftButton
+        with get() = leftButton.Publish
 
     static member RightButton
-        with get() = rightButton
+        with get() = rightButton.Publish
 
     static member MiddleButton
-        with get() = middleButton
+        with get() = middleButton.Publish
 
     static member ScrollWheelValue
-        with get() = scrollWheelValue
+        with get() = scrollWheelValue.Publish
 

@@ -1,4 +1,6 @@
-﻿
+﻿namespace Brains
+
+
 [<AbstractClass>]
 type AI() =
     let mutable running = false

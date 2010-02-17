@@ -1,11 +1,6 @@
-﻿
-open Microsoft.Xna.Framework
+﻿namespace Brains
 
-open Entity
-open Physical
-open Stats
-open Tree
-open AI
+open Microsoft.Xna.Framework
 
 type AI_MoveTo(entity : Entity, bind : AI_MoveTo -> unit) as self =
     inherit AI()

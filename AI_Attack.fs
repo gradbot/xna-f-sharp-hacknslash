@@ -1,10 +1,6 @@
-﻿open Microsoft.Xna.Framework
+﻿namespace Brains
 
-open Entity
-open Physical
-open Stats
-open Tree
-open AI
+open Microsoft.Xna.Framework
 
 type AI_Attack(entity : Entity, ?_target : Entity) =
     inherit AI()

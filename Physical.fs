@@ -1,4 +1,6 @@
-﻿open System
+﻿namespace Brains
+
+open System
 open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 

@@ -1,4 +1,6 @@
 ﻿
+namespace Brains
+
 type Tree<'a>() =
     let siblings = new ResizeArray<'a>()
     let children = new ResizeArray<'a>()

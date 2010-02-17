@@ -1,9 +1,9 @@
-﻿open System.Collections.Generic
+﻿namespace Brains
+
+open System.Collections.Generic
 
 open Microsoft.Xna.Framework.Graphics
 open Microsoft.Xna.Framework.Audio
-
-open XNAEngine
 
 type Resource =
     {

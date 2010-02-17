@@ -1,1 +1,3 @@
-﻿// trigger a random event from a list, event generator, or single
+﻿namespace Brains
+
+// trigger a random event from a list, event generator, or single

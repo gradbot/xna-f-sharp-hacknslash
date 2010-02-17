@@ -1,4 +1,6 @@
-﻿open Microsoft.Xna.Framework
+﻿namespace Brains
+
+open Microsoft.Xna.Framework
 
 type Frame =
     abstract member Draw : float32  -> unit

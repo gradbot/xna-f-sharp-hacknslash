@@ -1,4 +1,6 @@
-﻿open System
+﻿namespace Brains
+
+open System
 open System.Collections.Generic
 
 open Microsoft.Xna.Framework

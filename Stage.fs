@@ -1,12 +1,6 @@
-﻿open Microsoft.Xna.Framework
+﻿namespace Brains
 
-open Frame
-open Resource
-open Entity
-open Physical
-open Gear
-open Stats
-open AI
+open Microsoft.Xna.Framework
 
 type Stage(resource) =
     let hud = resource.SpriteBatch.["hud"]

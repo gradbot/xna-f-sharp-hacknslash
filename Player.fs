@@ -1,4 +1,6 @@
-﻿open Controller
+﻿namespace Brains
+
+open Controller
 
 type Player(num : int, controller : Controller) =
     static let mutable count = 0

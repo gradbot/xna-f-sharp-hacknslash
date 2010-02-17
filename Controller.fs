@@ -1,4 +1,6 @@
-﻿open Microsoft.Xna.Framework
+﻿module Controller
+
+open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Input
 
 type Controller(id : int) =
